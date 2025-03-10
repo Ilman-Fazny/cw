@@ -1,0 +1,152 @@
+/* Sitemap Specific Styles */
+.sitemap-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+svg#sitemap {
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+
+/* SVG Elements */
+.node rect {
+  stroke-width: 2px;
+  stroke: rgba(255, 255, 255, 0.3);
+  fill: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.node text {
+  fill: white;
+  text-anchor: middle;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.connector {
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-width: 2;
+}
+
+/* Node Types */
+.splash-node rect {
+  fill: rgba(16, 185, 129, 0.3);
+  stroke: rgba(16, 185, 129, 0.7);
+}
+
+.home-node rect {
+  fill: rgba(14, 165, 233, 0.3);
+  stroke: rgba(14, 165, 233, 0.7);
+}
+
+.main-node rect {
+  fill: rgba(245, 158, 11, 0.3);
+  stroke: rgba(245, 158, 11, 0.7);
+}
+
+.content-node rect {
+  fill: rgba(139, 92, 246, 0.3);
+  stroke: rgba(139, 92, 246, 0.7);
+}
+
+.editor-node rect {
+  fill: rgba(239, 68, 68, 0.3);
+  stroke: rgba(239, 68, 68, 0.7);
+}
+
+.validation-node rect {
+  fill: rgba(6, 182, 212, 0.3);
+  stroke: rgba(6, 182, 212, 0.7);
+}
+
+.sitemap-node rect {
+  fill: rgba(249, 115, 22, 0.3);
+  stroke: rgba(249, 115, 22, 0.7);
+}
+
+/* Hover Effects */
+.node:hover rect {
+  transform: scale(1.05);
+  fill-opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Focus for keyboard navigation */
+g:focus {
+  outline: none;
+}
+
+g:focus rect {
+  stroke-width: 3px;
+  stroke: white;
+}
+
+/* Legend */
+.sitemap-legend {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+}
+
+.sitemap-legend h4 {
+  margin-bottom: 1rem;
+}
+
+.sitemap-legend ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sitemap-legend li {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.splash-legend {
+  background-color: rgba(16, 185, 129, 0.7);
+}
+
+.home-legend {
+  background-color: rgba(14, 165, 233, 0.7);
+}
+
+.main-legend {
+  background-color: rgba(245, 158, 11, 0.7);
+}
+
+.content-legend {
+  background-color: rgba(139, 92, 246, 0.7);
+}
+
+.editor-legend {
+  background-color: rgba(239, 68, 68, 0.7);
+}
+
+.validation-legend {
+  background-color: rgba(6, 182, 212, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sitemap-legend ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  svg#sitemap {
+    min-height: 400px;
+  }
+}
